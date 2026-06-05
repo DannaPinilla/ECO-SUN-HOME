@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto | ECO SUN HOME</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo ECO SUN HOME">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyecto.html" class="activo">Proyecto</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="bienvenida">
+
+        <h2>Nuestro Proyecto</h2>
+
+        <div class="contenido-bienvenida">
+
+            <p>
+                El propósito del proyecto ECO SUN HOME es desarrollar e implementar una solución tecnológica innovadora que integre sistemas de energía solar y seguridad inteligente para hogares, con el fin de mejorar la eficiencia energética y la protección de las viviendas.
+            </p>
+
+            <p>
+                Este proyecto busca promover el uso de energías renovables mediante un sistema capaz de aprovechar la energía solar para el suministro eléctrico, reduciendo así la dependencia de fuentes de energía convencionales y contribuyendo al cuidado del medio ambiente.
+            </p>
+
+            <p>
+                Además, tiene como objetivo fortalecer la seguridad del hogar a través de un sistema de monitoreo inteligente para puertas, el cual permite detectar aperturas y cierres en tiempo real mediante sensores y enviar notificaciones al dispositivo móvil del usuario.
+            </p>
+
+            <p>
+                Otro propósito importante del proyecto es demostrar cómo la tecnología puede ser aplicada de manera accesible en entornos domésticos.
+            </p>
+
+            <p>
+                <strong class="slogan">ECO SUN HOME: innovación que protege, energía que transforma.</strong>
+            </p>
+
+        </div>
+
+        <!-- 🖼️ GALERÍA -->
+        <div class="galeria">
+
+            <div class="fila">
+                <img src="img/proyecto 1.jpeg" alt="proyecto 1" onclick="abrir(this)">
+                <img src="img/proyecto 2.jpeg" alt="proyecto 2" onclick="abrir(this)">
+                <img src="img/proyecto 3.jpeg" alt="proyecto 3" onclick="abrir(this)">
+            </div>
+
+            <div class="fila">
+                <img src="img/proyecto 4.jpeg" alt="proyecto 4" onclick="abrir(this)">
+                <img src="img/proyecto 5.jpeg" alt="proyecto 5" onclick="abrir(this)">
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" onclick="cerrar()">
+        <img id="imgGrande">
+    </div>
+
+    <script>
+        function abrir(img){
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("imgGrande").src = img.src;
+        }
+
+        function cerrar(){
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
