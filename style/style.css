@@ -354,3 +354,83 @@ form button:hover{
     font-size: 16px;
     margin-bottom: 10px;
 }
+
+/* ========================= */
+/* RESPONSIVE PARA CELULAR */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu a{
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    /* BIENVENIDA */
+    .bienvenida h2{
+        font-size: 30px;
+        padding: 0 10px;
+    }
+
+    .contenido-bienvenida{
+        font-size: 16px;
+        padding: 0 15px;
+        text-align: justify;
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .hero-texto h1{
+        font-size: 28px;
+    }
+
+    .hero-texto p{
+        font-size: 16px;
+    }
+
+    .hero-imagen img{
+        max-width: 90%;
+    }
+
+    /* GALERÍA */
+    .fila img{
+        width: 140px;
+        height: 100px;
+    }
+
+    /* SERVICIOS */
+    .servicios-grid{
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* FORMULARIO */
+    form{
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* INFO CONTACTO */
+    .info-card{
+        width: 90%;
+        padding: 20px;
+    }
+}
