@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Servicios | ECO SUN HOME</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo ECO SUN HOME">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="servicios.html" class="activo">Servicios</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="bienvenida">
+
+        <h2>🔧 Servicios de ECO SUN HOME</h2>
+
+        <div class="contenido-bienvenida">
+
+            <div class="servicios-grid">
+
+                <div class="servicio-card" onclick="abrirModal('solar')">
+                    <h3>☀️ Energía solar</h3>
+                    <p>Instalación de paneles solares.</p>
+                </div>
+
+                <div class="servicio-card" onclick="abrirModal('energia')">
+                    <h3>⚡ Sistemas eléctricos</h3>
+                    <p>Integración de energía solar.</p>
+                </div>
+
+                <div class="servicio-card" onclick="abrirModal('seguridad')">
+                    <h3>🔐 Seguridad inteligente</h3>
+                    <p>Control de puertas con sensores.</p>
+                </div>
+
+                <div class="servicio-card" onclick="abrirModal('alertas')">
+                    <h3>📱 Notificaciones</h3>
+                    <p>Alertas en tiempo real.</p>
+                </div>
+
+                <div class="servicio-card" onclick="abrirModal('soporte')">
+                    <h3>🛠️ Mantenimiento</h3>
+                    <p>Soporte técnico continuo.</p>
+                </div>
+
+                <div class="servicio-card" onclick="abrirModal('asesoria')">
+                    <h3>💡 Asesoría</h3>
+                    <p>Automatización del hogar.</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" onclick="cerrarModal()">
+
+        <div class="modal-contenido" onclick="event.stopPropagation()">
+            <h2 id="modalTitulo"></h2>
+            <p id="modalTexto"></p>
+        </div>
+
+    </div>
+
+    <script>
+        const info = {
+            solar: {
+                titulo: "☀️ Energía solar",
+                texto: "Instalamos paneles solares que convierten la energía del sol en electricidad limpia y renovable para tu hogar."
+            },
+            energia: {
+                titulo: "⚡ Sistemas eléctricos",
+                texto: "Integramos la energía solar al sistema eléctrico del hogar para mayor eficiencia y ahorro."
+            },
+            seguridad: {
+                titulo: "🔐 Seguridad inteligente",
+                texto: "Sensores en puertas con ESP32 que detectan aperturas y cierres en tiempo real."
+            },
+            alertas: {
+                titulo: "📱 Notificaciones",
+                texto: "Recibe alertas inmediatas en tu celular cuando haya actividad en tu hogar."
+            },
+            soporte: {
+                titulo: "🛠️ Mantenimiento",
+                texto: "Brindamos soporte técnico y mantenimiento para garantizar el funcionamiento del sistema."
+            },
+            asesoria: {
+                titulo: "💡 Asesoría",
+                texto: "Te guiamos para automatizar tu hogar con tecnología eficiente y accesible."
+            }
+        };
+
+        function abrirModal(tipo){
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("modalTitulo").innerText = info[tipo].titulo;
+            document.getElementById("modalTexto").innerText = info[tipo].texto;
+        }
+
+        function cerrarModal(){
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>
