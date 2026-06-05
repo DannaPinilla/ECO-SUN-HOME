@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECO SUN HOME</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo ECO SUN HOME">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html" class="activo">Inicio</a></li>
+            <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="bienvenida">
+
+        <h2>Bienvenido a ECO SUN HOME</h2>
+
+        <div class="contenido-bienvenida">
+
+            <p>
+                ECO SUN HOME es una empresa dedicada al desarrollo de soluciones tecnológicas para hogares inteligentes,
+                enfocadas en la eficiencia energética y la seguridad residencial. Nuestro propósito es ofrecer sistemas
+                innovadores que permitan a las familias reducir su consumo de energía convencional y mejorar la protección
+                de sus viviendas mediante tecnologías modernas y sostenibles.
+            </p>
+
+            <p>
+                Nuestro producto principal consiste en un sistema integrado de energía solar y monitoreo inteligente para
+                el hogar. Este sistema aprovecha la energía captada por paneles solares para suministrar electricidad de
+                manera eficiente, reduciendo costos energéticos y contribuyendo al cuidado del medio ambiente.
+            </p>
+
+            <p>
+                Además, incorpora un sistema de seguridad para puertas basado en sensores magnéticos y tecnología IoT,
+                capaz de detectar aperturas y cierres en tiempo real. Gracias a su conexión mediante ESP32, los usuarios
+                reciben notificaciones instantáneas en sus dispositivos móviles, permitiéndoles monitorear el estado de
+                su hogar desde cualquier lugar.
+            </p>
+
+            <p>
+                La maqueta de vivienda utilizada por ECO SUN HOME tiene como finalidad demostrar de manera práctica el
+                funcionamiento y la integración de estas tecnologías dentro de un entorno residencial real. Sin embargo,
+                el producto comercializado es el sistema de energía y seguridad, el cual puede adaptarse e instalarse en
+                diferentes tipos de viviendas.
+            </p>
+
+            <p>
+                En ECO SUN HOME trabajamos para acercar la innovación a los hogares, ofreciendo soluciones que combinan
+                sostenibilidad, ahorro, conectividad y tranquilidad para nuestros clientes.
+            </p>
+
+            <p class="slogan">
+                ECO SUN HOME: Energía que cuida tu hogar, seguridad que te acompaña.
+            </p>
+
+        </div>
+
+    </section>
+
+    <section class="hero">
+
+        <div class="hero-texto">
+
+            <h1>Energía que cuida tu hogar, seguridad que te acompaña</h1>
+
+            <p>
+                Combinamos la fuerza de la energía solar con tecnología inteligente
+                para brindarte ahorro, sostenibilidad y tranquilidad, manteniendo tu
+                hogar siempre conectado y protegido.
+            </p>
+
+        </div>
+
+        <div class="hero-imagen">
+            <img src="img/imagen inicio.png" alt="Imagen principal" onclick="abrir(this)">
+        </div>
+
+    </section>
+
+    <!-- MODAL (NO TOCA TU CONTENIDO) -->
+    <div id="modal" class="modal" onclick="cerrar()">
+        <img id="imgGrande">
+    </div>
+
+    <script>
+        function abrir(img){
+            document.getElementById("modal").style.display = "flex";
+            document.getElementById("imgGrande").src = img.src;
+        }
+
+        function cerrar(){
+            document.getElementById("modal").style.display = "none";
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,356 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    background-color: #F8F4E9;
+}
+
+/* NAVBAR */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 60px;
+    background-color: #E8D9A8;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.15);
+}
+
+.logo img{
+    height: 80px;
+}
+
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.menu a{
+    text-decoration: none;
+    color: #5B4A2F;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu a:hover{
+    background-color: #F4D35E;
+    color: #5B4A2F;
+    box-shadow: 0 0 15px rgba(244, 211, 94, 0.9);
+}
+
+.activo{
+    background-color: #F4D35E;
+    color: #5B4A2F;
+    box-shadow: 0 0 15px rgba(244, 211, 94, 0.9);
+}
+
+/* BIENVENIDA */
+.bienvenida{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 50px;
+}
+
+.bienvenida h2{
+    font-size: 42px;
+    color: #F4D35E;
+    font-weight: bold;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.15);
+}
+
+/* TEXTO GENERAL (PROYECTO, INICIO) */
+.contenido-bienvenida{
+    max-width: 1100px;
+    margin: 40px auto;
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 20px;
+    color: #5B4A2F;
+    padding: 0 30px;
+}
+
+.contenido-bienvenida p{
+    margin-bottom: 12px;
+}
+
+/* SOLO CONTACTO (CENTRADO) */
+.contacto-texto{
+    text-align: center;
+}
+
+/* SLOGAN */
+.slogan{
+    color: #F4D35E;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* HERO */
+.hero{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 60px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.hero-imagen{
+    display: flex;
+    justify-content: center;
+}
+
+.hero-imagen img{
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+
+    border-radius: 15px;
+    border: 3px solid #F4D35E;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.hero-imagen img:hover{
+    transform: scale(1.03);
+}
+
+.hero-texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-texto h1{
+    font-size: 40px;
+    color: #F4D35E;
+    max-width: 500px;
+}
+
+.hero-texto p{
+    margin-top: 15px;
+    font-size: 18px;
+    color: #5B4A2F;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* GALERÍA */
+.galeria{
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.fila{
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.fila img{
+    width: 200px;
+    height: 130px;
+    object-fit: cover;
+
+    border-radius: 12px;
+    border: 3px solid #D4B04C;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.fila img:hover{
+    transform: scale(1.08);
+}
+
+/* MODAL */
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal img{
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 12px;
+    border: 4px solid #F4D35E;
+}
+
+/* SERVICIOS */
+.servicios-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.servicio-card{
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #D4B04C;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s ease;
+
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicio-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(212,176,76,0.4);
+}
+
+.servicio-card h3{
+    color: #F4D35E;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.servicio-card p{
+    color: #5B4A2F;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* MODAL SERVICIOS */
+.modal-contenido{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 500px;
+    text-align: center;
+    border: 3px solid #F4D35E;
+}
+
+.modal-contenido h2{
+    color: #F4D35E;
+    margin-bottom: 15px;
+}
+
+.modal-contenido p{
+    color: #5B4A2F;
+    font-size: 18px;
+}
+
+/* CONTACTO */
+.formulario-contacto{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 80px;
+}
+
+form{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #D4B04C;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+form input,
+form textarea{
+    padding: 12px;
+    border: 2px solid #E8D9A8;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+}
+
+form button{
+    padding: 12px;
+    background: #F4D35E;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #5B4A2F;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+form button:hover{
+    box-shadow: 0 0 15px rgba(244,211,94,0.8);
+    transform: scale(1.03);
+}
+
+/* SOLO TEXTO DE CONTACTO */
+.contacto-texto{
+    text-align: center;
+}
+
+/* ========================= */
+/* INFO CONTACTO */
+/* ========================= */
+
+.info-contacto{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 80px;
+}
+
+.info-card{
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #D4B04C;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.info-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212,176,76,0.4);
+}
+
+/* TITULOS */
+.info-card h3{
+    color: #F4D35E;
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+/* TEXTO */
+.info-card p{
+    color: #5B4A2F;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
