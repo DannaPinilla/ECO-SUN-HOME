@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionamiento | ECO SUN HOME</title>
+    <link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo ECO SUN HOME">
+        </div>
+
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="funcionamiento.html" class="activo">Funcionamiento</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+
+    </nav>
+
+    <section class="bienvenida">
+
+        <h2>⚙️ Funcionamiento del Sistema</h2>
+
+        <div class="contenido-bienvenida">
+
+            <p>
+                ECO SUN HOME integra dos tecnologías principales: un sistema de energía solar y un sistema de seguridad inteligente para puertas.
+            </p>
+
+            <p>
+                Los paneles solares captan la energía proveniente del sol y la transforman en energía eléctrica que puede ser utilizada para alimentar diferentes dispositivos del hogar, reduciendo el consumo de energía convencional y promoviendo el uso de energías renovables.
+            </p>
+
+            <p>
+                Por otra parte, el sistema de seguridad utiliza sensores magnéticos instalados en la puerta principal para detectar aperturas y cierres en tiempo real.
+            </p>
+
+            <p>
+                Cuando el sensor detecta algún cambio, la información es enviada a un módulo ESP32 que procesa los datos y los transmite mediante internet.
+            </p>
+
+            <p>
+                Gracias a esta conexión, el usuario recibe notificaciones instantáneas en su dispositivo móvil, permitiéndole monitorear el estado de su hogar desde cualquier lugar.
+            </p>
+
+            <p>
+                La combinación de estas tecnologías permite ofrecer una solución eficiente, sostenible y segura para los hogares modernos.
+            </p>
+
+            <p class="slogan">
+                ECO SUN HOME: energía limpia y seguridad inteligente en un solo sistema.
+            </p>
+
+        </div>
+
+        <h3 class="subtitulo-funcionamiento">
+            · Funcionamiento del Prototipo
+        </h3>
+
+
+               <!-- VIDEO -->
+        <div class="video-contenedor">
+
+            <video controls>
+                <source src="video/funcionamiento.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+
+        </div>
+
+        <!-- ESQUEMAS -->
+
+<div class="esquemas-contenedor">
+
+    <div class="esquema">
+
+        <h3 class="titulo-esquema">
+            Esquema de Funcionamiento del Sistema Solar
+        </h3>
+
+        <img src="img/esquema solar.jpeg" alt="Esquema Sistema Solar" onclick="abrirImagen(this)">
+
+    </div>
+
+    <div class="esquema">
+
+        <h3 class="titulo-esquema">
+            Esquema de Conexión del Sistema de Seguridad
+        </h3>
+
+        <img src="img/esquema seguridad.png" alt="Esquema Sistema Seguridad" onclick="abrirImagen(this)">
+
+    </div>
+
+    <!-- MODAL IMAGENES -->
+
+<div id="modalImagen" class="modal-imagen">
+
+    <span class="cerrar-imagen" onclick="cerrarImagen()">&times;</span>
+
+    <img id="imagenGrande">
+
+</div>
+
+</div>
+
+    </section>
+
+<script>
+
+function abrirImagen(img){
+
+    document.getElementById("modalImagen").style.display = "flex";
+    document.getElementById("imagenGrande").src = img.src;
+
+}
+
+function cerrarImagen(){
+
+    document.getElementById("modalImagen").style.display = "none";
+
+}
+
+</script>
+
+</body>
+</html>
