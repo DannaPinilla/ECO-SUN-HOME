@@ -354,3 +354,338 @@ form button:hover{
     font-size: 16px;
     margin-bottom: 10px;
 }
+
+/* ========================= */
+/* RESPONSIVE PARA CELULAR */
+/* ========================= */
+
+@media (max-width: 768px){
+
+    /* NAVBAR */
+    .navbar{
+        flex-direction: column;
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .menu{
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .menu a{
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+
+    /* BIENVENIDA */
+    .bienvenida h2{
+        font-size: 30px;
+        padding: 0 10px;
+    }
+
+    .contenido-bienvenida{
+        font-size: 16px;
+        padding: 0 15px;
+        text-align: justify;
+    }
+
+    /* HERO */
+    .hero{
+        flex-direction: column;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .hero-texto h1{
+        font-size: 28px;
+    }
+
+    .hero-texto p{
+        font-size: 16px;
+    }
+
+    .hero-imagen img{
+        max-width: 90%;
+    }
+
+    /* GALERÍA */
+    .fila img{
+        width: 140px;
+        height: 100px;
+    }
+
+    /* SERVICIOS */
+    .servicios-grid{
+        grid-template-columns: 1fr;
+        padding: 0 15px;
+    }
+
+    /* FORMULARIO */
+    form{
+        width: 90%;
+        padding: 20px;
+    }
+
+    /* INFO CONTACTO */
+    .info-card{
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+/* BOTON CERRAR */
+
+.cerrar-modal{
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 1001;
+}
+
+/* BOTONES LATERALES */
+
+.btn-modal{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background: rgba(244,211,94,0.9);
+    border: none;
+    color: #5B4A2F;
+
+    font-size: 35px;
+    font-weight: bold;
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+    cursor: pointer;
+
+    transition: 0.3s;
+    z-index: 1001;
+}
+
+.btn-modal:hover{
+    transform: translateY(-50%) scale(1.1);
+}
+
+.izquierda{
+    left: 30px;
+}
+
+.derecha{
+    right: 30px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .btn-modal{
+        width: 45px;
+        height: 45px;
+        font-size: 25px;
+    }
+
+    .cerrar-modal{
+        font-size: 40px;
+        right: 20px;
+    }
+}
+
+/* VIDEO FUNCIONAMIENTO */
+
+.video-contenedor{
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 100px;
+    padding: 0 50px;
+}
+
+.video-contenedor video{
+    width: 100%;
+    max-width: 900px;
+    border-radius: 15px;
+    border: 3px solid #F4D35E;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+}
+
+/* RESPONSIVE VIDEO */
+
+@media (max-width: 768px){
+
+    .video-contenedor video{
+        max-width: 100%;
+    }
+
+}
+
+/* SUBTITULO FUNCIONAMIENTO */
+
+.subtitulo-funcionamiento{
+    max-width: 900px;
+    margin: 70px auto -20px auto;
+    text-align: left;
+
+    font-size: 28px;
+    font-weight: bold;
+    color: #F4D35E;
+}
+
+@media (max-width: 768px){
+
+    .subtitulo-funcionamiento{
+        width: 90%;
+        font-size: 22px;
+    }
+
+}
+
+/* ========================= */
+/* ESQUEMAS FUNCIONAMIENTO */
+/* ========================= */
+
+.esquemas-contenedor{
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 30px;
+
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.esquema{
+    flex: 1;
+    min-width: 320px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.titulo-esquema{
+    color: #F4D35E;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.esquema img{
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #F4D35E;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+    transition: 0.3s ease;
+}
+
+.esquema img:hover{
+    transform: scale(1.03);
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px){
+
+    .esquemas-contenedor{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .titulo-esquema{
+        font-size: 20px;
+    }
+
+}
+
+/* ========================= */
+/* IMAGENES ESQUEMAS */
+/* ========================= */
+
+.esquema img{
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+
+    border-radius: 15px;
+    border: 3px solid #F4D35E;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.esquema img:hover{
+    transform: scale(1.03);
+}
+
+/* ========================= */
+/* MODAL IMAGEN */
+/* ========================= */
+
+.modal-imagen{
+    display: none;
+    position: fixed;
+    z-index: 9999;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0,0,0,0.9);
+
+    justify-content: center;
+    align-items: center;
+}
+
+#imagenGrande{
+    max-width: 90%;
+    max-height: 90%;
+
+    border-radius: 15px;
+    border: 4px solid #F4D35E;
+}
+
+.cerrar-imagen{
+    position: absolute;
+    top: 20px;
+    right: 35px;
+
+    color: white;
+    font-size: 55px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.cerrar-imagen:hover{
+    color: #F4D35E;
+}
+
+/* X PARA CERRAR MODAL DE SERVICIOS */
+
+.cerrar-servicio{
+    position: absolute;
+    top: 30px;
+    right: 50px;
+
+    font-size: 60px;
+    font-weight: bold;
+
+    color: #5B4A2F;
+    cursor: pointer;
+}
+
+.cerrar-servicio:hover{
+    color: #F4D35E;
+}
