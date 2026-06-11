@@ -18,6 +18,7 @@
         <ul class="menu">
             <li><a href="index.html">Inicio</a></li>
             <li><a href="proyecto.html">Proyecto</a></li>
+            <li><a href="funcionamiento.html">Funcionamiento</a></li>
             <li><a href="servicios.html" class="activo">Servicios</a></li>
             <li><a href="contactos.html">Contacto</a></li>
         </ul>
@@ -68,15 +69,19 @@
 
     </section>
 
-    <!-- MODAL -->
-    <div id="modal" class="modal" onclick="cerrarModal()">
+<div id="modal" class="modal" onclick="cerrarModal()">
 
-        <div class="modal-contenido" onclick="event.stopPropagation()">
-            <h2 id="modalTitulo"></h2>
-            <p id="modalTexto"></p>
-        </div>
+    <div class="modal-contenido" onclick="event.stopPropagation()">
+
+        <span class="cerrar-servicio" onclick="cerrarModal()">&times;</span>
+
+        <h2 id="modalTitulo"></h2>
+
+        <p id="modalTexto"></p>
 
     </div>
+
+</div>
 
     <script>
         const info = {
